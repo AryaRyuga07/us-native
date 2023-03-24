@@ -1,0 +1,133 @@
+button:hover {
+	cursor: pointer;
+}
+
+main .recent-orders .overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 9999;
+	transition: .8s;
+	display: none;
+}
+
+main .recent-orders .overlay:target {
+	display: flex;
+	width: auto;
+	height: auto;
+	right: 0;
+	bottom: 0;
+}
+
+main .recent-orders .overlay .add-card {
+	max-height: 100%;
+	height: 600px;
+	width: 450px;
+	margin-top: 30px;
+	margin-left: 500px;
+	background-color: white;
+	box-shadow: 2px 2px 7px rgba(0, 0, 0, .5);
+}
+
+main .recent-orders .overlay .add-card h1 {
+	text-align: center;
+	margin-top: 20px;
+}
+
+main .recent-orders .overlay:target .add-card {
+	animation: zoomAndFade 1s;
+}
+
+main .recent-orders .overlay:target .close {
+	animation: slideDownFade .5s .5s forwards;
+}
+
+main .recent-orders .overlay .close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: white;
+	margin-top: 10px;
+	margin-right: 380px;
+}
+
+main .recent-orders .overlay .add-card .input-form input {
+	margin-left: 20px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 410px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+main .recent-orders .overlay .add-card .input-form textarea {
+	margin-left: 20px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 410px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+main .recent-orders .overlay .add-card .input-form select {
+	margin-left: 20px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 410px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+main .recent-orders .overlay .add-card form {
+	display: inline;
+}
+
+main .recent-orders .overlay .add-card .input-form button {
+	margin-left: 20px;
+    margin-top: 100px;
+    margin-right: 190px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background: #9576F8;
+    color: white;
+}
+
+main .recent-orders .overlay .add-card .cancel-form button {
+	margin-left: 20px;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background: #9576F8;
+    color: white;
+}
+
+@keyframes zoomAndFade {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	
+}
+
+@keyframes slideDownFade {
+	0% {
+		opacity: 0;
+		margin-top: -10px;
+	}
+
+	100% {
+		opacity: 1;
+		margin-top: 10;
+	}
+}
